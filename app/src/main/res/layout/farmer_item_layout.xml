@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="4dp"
+    android:layout_margin="@dimen/default_margin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/default_padding">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/default_margin"
+        app:srcCompat="@drawable/person_placeholder_transparent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/farmerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Edouard Mendy"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginStart="4dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/raleway_medium"
+        android:layout_toEndOf="@id/image" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/farmerPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="08035954304"
+        android:textSize="15sp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/raleway_medium"
+        android:layout_toEndOf="@id/image"
+        android:layout_below="@id/farmerName" />
+
+</RelativeLayout>
+</androidx.cardview.widget.CardView>

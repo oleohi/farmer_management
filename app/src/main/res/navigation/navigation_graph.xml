@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/loginFragment2">
+
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.oleohialli.farminventory.views.LoginFragment"
+        android:label="Farm Inventory"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment2_to_dashboardFragment2"
+            app:destination="@id/dashboardFragment2"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment2"
+        android:name="com.oleohialli.farminventory.views.farmer.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment2_to_detailFragment2"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.oleohialli.farminventory.views.farmerdetail.DetailFragment"
+        android:label="Farmer Detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="farmer"
+            app:argType="com.oleohialli.farminventory.data.FarmerInfo"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>

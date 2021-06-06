@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Farm Inventory</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="enter_your_login_credentials">Enter your login credentials</string>
+    <string name="logout">Logout</string>
+    <string name="add_farmer">Add Farmer</string>
+    <string name="full_name">Full Name</string>
+    <string name="phone">Phone</string>
+    <string name="state">State</string>
+    <string name="lga">LGA</string>
+    <string name="farmer_details">Farmer Details</string>
+    <string name="visibility_switch">Visibility Switch</string>
+    <string name="farm_name">Farm Name</string>
+    <string name="farm_location">Farm Location</string>
+    <string name="farm_coordinates">Farm Coordinates</string>
+    <string name="farm_information">Farm Information</string>
+    <string name="farmer_information">Farmer Information</string>
+    <string name="search">Search</string>
+    <string name="save">Save</string>
+    <string name="total_farmers">Total Farmers</string>
+    <string name="total_farms">Total Farms</string>
+</resources>
