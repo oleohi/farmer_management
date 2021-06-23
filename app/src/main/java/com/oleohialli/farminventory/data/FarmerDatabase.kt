@@ -20,16 +20,13 @@ abstract class FarmerDatabase : RoomDatabase() {
         @ApplicationScope private val applicationScope: CoroutineScope
     ) : RoomDatabase.Callback() {
 
-        override fun onCreate(db: SupportSQLiteDatabase) {
-            super.onCreate(db)
-            val dao = database.get().farmerDao()
-            applicationScope.launch {
-                dao.insert(FarmerInfo("Edouard Mendy", "080938948739", "Kano"))
-                dao.insert(FarmerInfo("Paulo Ferreira", "080938948739", "Kano"))
-                dao.insert(FarmerInfo("Thelma Obosi", "080938948739", "Kano"))
-                dao.insert(FarmerInfo("Sue Ikpuri", "080938948739", "Kano"))
-                dao.insert(FarmerInfo("Karo Smith", "080938948739", "Kano"))
-            }
-        }
+//        override fun onCreate(db: SupportSQLiteDatabase) {
+//            super.onCreate(db)
+//            val dao = database.get().farmerDao()
+//            applicationScope.launch {
+//                dao.insert(FarmerInfo("Edouard Mendy", "080939458739", "Kano"))
+//                dao.insert(FarmerInfo("Karo Smith", "080938948739", "Delta"))
+//            }
+//        }
     }
 }

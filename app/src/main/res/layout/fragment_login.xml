@@ -25,7 +25,6 @@
             android:fontFamily="@font/raleway_semibold"
             android:text="@string/enter_your_login_credentials"
             android:textAlignment="center"
-            android:textColor="@android:color/black"
             android:textSize="18sp" />
 
 

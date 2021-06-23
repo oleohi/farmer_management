@@ -32,7 +32,6 @@
             android:fontFamily="@font/raleway_semibold"
             android:text="0"
             android:textAlignment="center"
-            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -54,7 +53,6 @@
             android:fontFamily="@font/raleway_semibold"
             android:text="0"
             android:textAlignment="center"
-            android:textColor="@color/black"
             android:textSize="20sp" />
 
     </RelativeLayout>

@@ -25,7 +25,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="Edouard Mendy"
-        android:textColor="@color/black"
         android:maxLines="1"
         android:ellipsize="end"
         android:layout_marginStart="4dp"

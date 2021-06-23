@@ -3,6 +3,7 @@ package com.oleohialli.farminventory.views.farmer
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.net.toUri
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -10,12 +11,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.oleohialli.farminventory.R
 import com.oleohialli.farminventory.data.FarmerInfo
 import com.oleohialli.farminventory.databinding.FarmerItemLayoutBinding
+import kotlin.coroutines.suspendCoroutine
 
-class FarmerAdapter(private val listener: OnItemClickListener) : ListAdapter<FarmerInfo, FarmerAdapter.FarmerViewHolder>(DiffCallback()) {
+class FarmerAdapter(private val listener: OnItemClickListener) :
+    ListAdapter<FarmerInfo, FarmerAdapter.FarmerViewHolder>(DiffCallback()) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FarmerViewHolder {
-        val binding = FarmerItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            FarmerItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return FarmerViewHolder(binding)
     }
 
@@ -25,7 +29,8 @@ class FarmerAdapter(private val listener: OnItemClickListener) : ListAdapter<Far
     }
 
 
-    inner class FarmerViewHolder(private val binding: FarmerItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class FarmerViewHolder(private val binding: FarmerItemLayoutBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         init {
             binding.apply {
@@ -43,7 +48,10 @@ class FarmerAdapter(private val listener: OnItemClickListener) : ListAdapter<Far
             binding.apply {
                 farmerName.text = farmer.farmerName
                 farmerPhone.text = farmer.farmerPhone
-                image.setImageResource(R.drawable.person_placeholder_transparent)
+                if (farmer.farmerPhoto != "")
+                    image.setImageURI(farmer.farmerPhoto.toUri())
+                else
+                    image.setImageResource(R.drawable.person_placeholder_transparent)
             }
         }
     }

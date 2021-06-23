@@ -14,8 +14,8 @@ data class FarmerInfo(
     val farmerState: String,
     val farmerLga: String = "",
     val farmerPhoto: String = "",
-    val farmName: String = "",
-    val farmLocation: String = "",
+    val farmName: String,
+    val farmLocation: String,
     val farmCoordinates: String = "",
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     ) : Parcelable {

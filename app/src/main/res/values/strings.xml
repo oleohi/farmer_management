@@ -21,4 +21,8 @@
     <string name="save">Save</string>
     <string name="total_farmers">Total Farmers</string>
     <string name="total_farms">Total Farms</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
 </resources>

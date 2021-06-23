@@ -1,16 +1,18 @@
 package com.oleohialli.farminventory
 
 import android.app.Activity
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.DialogFragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.oleohialli.farminventory.databinding.ActivityMainBinding
+import com.oleohialli.farminventory.views.farmerdetail.CoordinatesDialog
 import dagger.hilt.android.AndroidEntryPoint
 
 const val ADD_FARMER_RESULT_OK = Activity.RESULT_FIRST_USER
@@ -48,4 +50,5 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
     }
+
 }

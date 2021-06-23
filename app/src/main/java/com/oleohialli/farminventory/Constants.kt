@@ -6,4 +6,5 @@ object Constants {
     const val TABLE_NAME = "farmer_table"
     const val LOGIN_EMAIL = "test@tellerium.io"
     const val LOGIN_PASSWORD = "password"
+    const val COORDINATES_DIALOG_FRAGMENT_TAG = "CoordinatesDialogFragment"
 }

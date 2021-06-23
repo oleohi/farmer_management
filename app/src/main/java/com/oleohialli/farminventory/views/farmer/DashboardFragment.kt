@@ -55,6 +55,12 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard), FarmerAdapter.O
                 }
 
             }).attachToRecyclerView(recyclerView)
+
+
+            viewModel.farmers.observe(viewLifecycleOwner) {
+                totalFarmers.text = it.size.toString()
+                totalFarms.text = it.size.toString()
+            }
         }
 
         setFragmentResultListener("add_edit_request") { _, bundle ->
